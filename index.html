@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+<body>
+  <div id="app">
+    <!-- Your Vue component will be rendered here -->
+    <ul v-for="(item, index) in message.descriptionTwo" :key="index">
+      <li v-html="item"></li>
+    </ul>
+  </div>
+
+  <!-- Include Vue.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+
+  <!-- Import your Vue component -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
