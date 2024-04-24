@@ -1,0 +1,16 @@
+<div class="app">
+    <div class="input-container">
+        <div contenteditable="true" v-html="input" class="text-box" ref="myTextBox" @input="updateText" @click="removePlaceholder" @keydown="updateText" @keyup="updateText" @mouseup="updateText"></div>
+        <div class="button-container">
+        <button :class="{ 'highlighted': activeButton === 'normal_button' }" @click="surroundTextWithTag('normal_button')">X</button>
+        <button :class="{ 'highlighted': activeButton === 'sup_button' }" @click="surroundTextWithTag('sup_button')">X<sup>y</sup></button>
+        <button :class="{ 'highlighted': activeButton === 'sub_button' }" @click="surroundTextWithTag('sub_button')">X<sub>y</sub></button>
+        <button :class="{ 'highlighted': activeButton === 'stack_button' }" @click="surroundTextWithboth()">X<span class="buttonstacked"><sup>z</sup><sub>y</sub></span></button>
+        <!-- <button :class="{ 'highlighted': activeButton === 'arrow_button' }" @click="insertOperator('⇒')">⇒</button>
+        <button :class="{ 'highlighted': activeButton === 'arrow_button' }" @click="insertOperator('⇄')">⇄</button> -->
+        <button :class="{ 'highlighted': activeButton === 'compute_button' }" @click="this.computedText =compute(this.displayText)">Compute</button>
+        <button :class="{ 'highlighted': activeButton === 'compute_button' }" @click="computeTestCases()">Test</button>
+        </div>
+    </div>
+    <div class="text-box readonly-text-box" v-html="computedText"></div>
+</div>

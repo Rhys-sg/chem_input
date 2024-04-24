@@ -1,0 +1,72 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .text-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 500px;
+    min-height: 50px;
+    overflow-y: auto;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .button-container {
+    margin-top: 10px;
+    white-space: nowrap;
+  }
+  
+  .button-container button {
+    margin-left: 5px;
+    display: inline-block;
+  }
+  
+  .placeholder {
+    color: #bbbbbb;
+  }
+  
+  .highlighted {
+    background-color: #9e9e9e;
+  }
+  
+  .stacked,
+  .buttonstacked {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .stacked sup,
+  .stacked sub,
+  .buttonstacked sup,
+  .buttonstacked sub {
+    position: absolute;
+    left: 0;
+    display: block;
+    text-align: center;
+  }
+  
+  /* two different stacked ratios because the button looks weird if it's accurate */
+  .buttonstacked sup {
+    top: -1.8em;
+  }
+  
+  .buttonstacked sub {
+    bottom: -0.7em;
+  }
+  
+  .stacked sup {
+    top: -2em;
+  }
+  
+  .stacked sub {
+    bottom: -1.25em;
+  }
