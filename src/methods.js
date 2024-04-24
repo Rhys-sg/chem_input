@@ -1,5 +1,3 @@
-import { _compute } from './compute.js';
-
 class NotImplementedError extends Error {
     constructor(message = 'This feature is not implemented yet.') {
         super(message);
