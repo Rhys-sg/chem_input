@@ -8,7 +8,7 @@
         <button :class="{ 'highlighted': activeButton === 'stack_button' }" @click="surroundTextWithboth()">X<span class="buttonstacked"><sup>z</sup><sub>y</sub></span></button>
         <!-- <button :class="{ 'highlighted': activeButton === 'arrow_button' }" @click="insertOperator('⇒')">⇒</button>
         <button :class="{ 'highlighted': activeButton === 'arrow_button' }" @click="insertOperator('⇄')">⇄</button> -->
-        <button :class="{ 'highlighted': activeButton === 'compute_button' }" @click="this.computedText =compute(this.displayText)">Compute</button>
+        <button :class="{ 'highlighted': activeButton === 'compute_button' }" @click="this.computedText =compute(this.displayText)">Convert</button>
         <button :class="{ 'highlighted': activeButton === 'compute_button' }" @click="computeTestCases()">Test</button>
         </div>
     </div>
